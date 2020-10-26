@@ -822,13 +822,13 @@ public class RNBluetoothClassicModule
    */
   @Override
   public void onReceivedData(BluetoothDevice device, byte[] data) {
-    String msg = String.format("Received %d bytes from device %s", data.length, device.getName());
-    Log.d(TAG, msg);
+    // String msg = String.format("Received %d bytes from device %s", data.length, device.getName());
+    // Log.d(TAG, msg);
 
     mBuffer.append(new String(data, mCharset));
 
     if (!mReadObserving.get()) {
-      Log.d(TAG, "No BTEvent.READ listeners are registered, skipping handling of the event");
+      // Log.d(TAG, "No BTEvent.READ listeners are registered, skipping handling of the event");
       return;
     }
 
